@@ -11,6 +11,7 @@ import {
 import appCss from "../styles.css?url";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
+import { LoadingScreen } from "@/components/site/LoadingScreen";
 
 function NotFoundComponent() {
   return (
@@ -116,6 +117,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <LoadingScreen />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">
