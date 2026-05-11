@@ -21,8 +21,8 @@ function Services() {
     <>
       <section className="relative overflow-hidden border-b border-border">
         <div className="absolute inset-0">
-          <img src={cctv} alt="" className="w-full h-full object-cover opacity-30" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/40" />
+          <img src={cctv} alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-transparent" />
         </div>
         <div className="relative container mx-auto px-6 py-28 max-w-5xl">
           <Reveal>
@@ -51,7 +51,7 @@ function Services() {
                     height={512}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card/60 via-transparent to-transparent" />
                   <div className="absolute bottom-3 left-3 h-11 w-11 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-glow group-hover:scale-110 transition-transform">
                     <s.icon className="h-5 w-5 text-primary-foreground" />
                   </div>

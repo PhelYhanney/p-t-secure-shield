@@ -48,8 +48,8 @@ function ServiceDetail() {
     <>
       <section className="relative overflow-hidden border-b border-border">
         <div className="absolute inset-0">
-          <img src={s.image} alt="" className="w-full h-full object-cover opacity-40" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/30" />
+          <img src={s.image} alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-transparent" />
         </div>
         <div className="relative container mx-auto px-6 py-24 max-w-5xl">
           <Reveal>
@@ -149,7 +149,7 @@ function ServiceDetail() {
               >
                 <div className="relative aspect-[3/2] overflow-hidden">
                   <img src={r.image} alt={r.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card/60 via-transparent to-transparent" />
                 </div>
                 <div className="p-6">
                   <h3 className="font-semibold mb-2">{r.title}</h3>
