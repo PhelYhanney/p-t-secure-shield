@@ -1,15 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal } from "@/components/site/Reveal";
-import { Shield, Users, Car, Camera, KeyRound, PartyPopper, Home, Briefcase, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import cctv from "@/assets/cctv.jpg";
-import imgExecutive from "@/assets/service-executive.jpg";
-import imgGuarding from "@/assets/service-guarding.jpg";
-import imgPatrol from "@/assets/service-patrol.jpg";
-import imgCctv from "@/assets/service-cctv.jpg";
-import imgAccess from "@/assets/service-access.jpg";
-import imgEvent from "@/assets/service-event.jpg";
-import imgResidential from "@/assets/service-residential.jpg";
-import imgConsulting from "@/assets/service-consulting.jpg";
+import { services } from "@/data/services";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -22,17 +15,6 @@ export const Route = createFileRoute("/services")({
   }),
   component: Services,
 });
-
-const services = [
-  { icon: Shield, image: imgExecutive, title: "Executive Protection", desc: "Discreet, highly trained close protection officers for VIPs, executives and high-profile individuals." },
-  { icon: Users, image: imgGuarding, title: "Manned Guarding", desc: "SIA-licensed officers providing visible, professional on-site security for any environment." },
-  { icon: Car, image: imgPatrol, title: "Mobile Patrols", desc: "Scheduled and random patrols across multiple sites for visible deterrence and rapid response." },
-  { icon: Camera, image: imgCctv, title: "CCTV Surveillance", desc: "Modern monitoring solutions with proactive incident detection and reporting." },
-  { icon: KeyRound, image: imgAccess, title: "Access Control", desc: "Managed entry systems, visitor screening, and credential verification." },
-  { icon: PartyPopper, image: imgEvent, title: "Event Security", desc: "Crowd management, VIP escorting and risk assessment for events of all sizes." },
-  { icon: Home, image: imgResidential, title: "Residential Security", desc: "Tailored protection plans for private homes, estates and gated communities." },
-  { icon: Briefcase, image: imgConsulting, title: "Security Consulting", desc: "Bespoke threat assessments and security strategy for businesses and individuals." },
-];
 
 function Services() {
   return (
@@ -55,7 +37,11 @@ function Services() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((s, i) => (
             <Reveal key={s.title} delay={(i % 4) * 0.08}>
-              <div className="group h-full rounded-xl border border-border bg-card overflow-hidden hover:border-accent hover:-translate-y-1 hover:shadow-glow transition-all flex flex-col">
+              <Link
+                to="/services/$slug"
+                params={{ slug: s.slug }}
+                className="group block h-full rounded-xl border border-border bg-card overflow-hidden hover:border-accent hover:-translate-y-1 hover:shadow-glow transition-all flex flex-col"
+              >
                 <div className="relative aspect-[3/2] overflow-hidden">
                   <img
                     src={s.image}
@@ -73,8 +59,11 @@ function Services() {
                 <div className="p-6 flex-1">
                   <h3 className="text-lg font-semibold mb-2">{s.title}</h3>
                   <p className="text-sm text-muted-foreground">{s.desc}</p>
+                  <div className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-accent group-hover:gap-2 transition-all">
+                    Learn more <ArrowRight className="h-3 w-3" />
+                  </div>
                 </div>
-              </div>
+              </Link>
             </Reveal>
           ))}
         </div>
