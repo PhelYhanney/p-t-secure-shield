@@ -31,7 +31,7 @@ function Index() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <img src={hero} alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/10" />
         </div>
         <div className="relative container mx-auto px-6 py-32 md:py-44 max-w-6xl">
           <motion.div
