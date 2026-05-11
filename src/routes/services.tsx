@@ -2,6 +2,14 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal } from "@/components/site/Reveal";
 import { Shield, Users, Car, Camera, KeyRound, PartyPopper, Home, Briefcase, ArrowRight } from "lucide-react";
 import cctv from "@/assets/cctv.jpg";
+import imgExecutive from "@/assets/service-executive.jpg";
+import imgGuarding from "@/assets/service-guarding.jpg";
+import imgPatrol from "@/assets/service-patrol.jpg";
+import imgCctv from "@/assets/service-cctv.jpg";
+import imgAccess from "@/assets/service-access.jpg";
+import imgEvent from "@/assets/service-event.jpg";
+import imgResidential from "@/assets/service-residential.jpg";
+import imgConsulting from "@/assets/service-consulting.jpg";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -16,14 +24,14 @@ export const Route = createFileRoute("/services")({
 });
 
 const services = [
-  { icon: Shield, title: "Executive Protection", desc: "Discreet, highly trained close protection officers for VIPs, executives and high-profile individuals." },
-  { icon: Users, title: "Manned Guarding", desc: "SIA-licensed officers providing visible, professional on-site security for any environment." },
-  { icon: Car, title: "Mobile Patrols", desc: "Scheduled and random patrols across multiple sites for visible deterrence and rapid response." },
-  { icon: Camera, title: "CCTV Surveillance", desc: "Modern monitoring solutions with proactive incident detection and reporting." },
-  { icon: KeyRound, title: "Access Control", desc: "Managed entry systems, visitor screening, and credential verification." },
-  { icon: PartyPopper, title: "Event Security", desc: "Crowd management, VIP escorting and risk assessment for events of all sizes." },
-  { icon: Home, title: "Residential Security", desc: "Tailored protection plans for private homes, estates and gated communities." },
-  { icon: Briefcase, title: "Security Consulting", desc: "Bespoke threat assessments and security strategy for businesses and individuals." },
+  { icon: Shield, image: imgExecutive, title: "Executive Protection", desc: "Discreet, highly trained close protection officers for VIPs, executives and high-profile individuals." },
+  { icon: Users, image: imgGuarding, title: "Manned Guarding", desc: "SIA-licensed officers providing visible, professional on-site security for any environment." },
+  { icon: Car, image: imgPatrol, title: "Mobile Patrols", desc: "Scheduled and random patrols across multiple sites for visible deterrence and rapid response." },
+  { icon: Camera, image: imgCctv, title: "CCTV Surveillance", desc: "Modern monitoring solutions with proactive incident detection and reporting." },
+  { icon: KeyRound, image: imgAccess, title: "Access Control", desc: "Managed entry systems, visitor screening, and credential verification." },
+  { icon: PartyPopper, image: imgEvent, title: "Event Security", desc: "Crowd management, VIP escorting and risk assessment for events of all sizes." },
+  { icon: Home, image: imgResidential, title: "Residential Security", desc: "Tailored protection plans for private homes, estates and gated communities." },
+  { icon: Briefcase, image: imgConsulting, title: "Security Consulting", desc: "Bespoke threat assessments and security strategy for businesses and individuals." },
 ];
 
 function Services() {
@@ -44,15 +52,28 @@ function Services() {
       </section>
 
       <section className="container mx-auto px-6 py-24">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((s, i) => (
             <Reveal key={s.title} delay={(i % 4) * 0.08}>
-              <div className="group h-full rounded-xl border border-border bg-card p-7 hover:border-accent hover:-translate-y-1 hover:shadow-glow transition-all">
-                <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                  <s.icon className="h-6 w-6 text-primary-foreground" />
+              <div className="group h-full rounded-xl border border-border bg-card overflow-hidden hover:border-accent hover:-translate-y-1 hover:shadow-glow transition-all flex flex-col">
+                <div className="relative aspect-[3/2] overflow-hidden">
+                  <img
+                    src={s.image}
+                    alt={s.title}
+                    loading="lazy"
+                    width={768}
+                    height={512}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+                  <div className="absolute bottom-3 left-3 h-11 w-11 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-glow group-hover:scale-110 transition-transform">
+                    <s.icon className="h-5 w-5 text-primary-foreground" />
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold mb-2">{s.title}</h3>
-                <p className="text-sm text-muted-foreground">{s.desc}</p>
+                <div className="p-6 flex-1">
+                  <h3 className="text-lg font-semibold mb-2">{s.title}</h3>
+                  <p className="text-sm text-muted-foreground">{s.desc}</p>
+                </div>
               </div>
             </Reveal>
           ))}
