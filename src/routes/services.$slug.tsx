@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Reveal } from "@/components/site/Reveal";
 import { ArrowRight, ArrowLeft, Check, ShieldCheck } from "lucide-react";
-import { services, getService } from "@/data/services";
+import { services, getService, type Service } from "@/data/services";
 
 export const Route = createFileRoute("/services/$slug")({
   head: ({ params }) => {
@@ -40,7 +40,7 @@ export const Route = createFileRoute("/services/$slug")({
 });
 
 function ServiceDetail() {
-  const { service: s } = Route.useLoaderData();
+  const { service: s } = Route.useLoaderData() as { service: Service };
   const Icon = s.icon;
   const related = services.filter((x) => x.slug !== s.slug).slice(0, 3);
 
