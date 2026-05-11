@@ -46,7 +46,7 @@ function Index() {
             <h1 className="text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight">
               Protection you can <span className="text-gradient">trust</span>, <br className="hidden md:block" />vigilance you can feel.
             </h1>
-            <p className="mt-6 text-lg text-muted-foreground max-w-xl">
+            <p className="mt-6 max-w-2xl text-muted-foreground text-slate-50">
               P&T Executive Protection delivers reliable, discreet, and high-quality security solutions for individuals, businesses, and organizations across the United Kingdom.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
