@@ -77,10 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "P&T Executive Protection — UK Security Services" },
       { name: "description", content: "Professional, discreet executive protection and security services across the UK. Manned guarding, CCTV, mobile patrols, event & residential security." },
-      { property: "og:title", content: "P&T Executive Protection" },
-      { property: "og:description", content: "Reliable, professional security solutions across the United Kingdom." },
+      { property: "og:title", content: "P&T Executive Protection — UK Security Services" },
+      { property: "og:description", content: "Professional, discreet executive protection and security services across the UK. Manned guarding, CCTV, mobile patrols, event & residential security." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "P&T Executive Protection — UK Security Services" },
+      { name: "twitter:description", content: "Professional, discreet executive protection and security services across the UK. Manned guarding, CCTV, mobile patrols, event & residential security." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0eb68287-f31b-4a11-9d5d-396fdafda79c/id-preview-a8b92886--0707b07e-cd9e-4873-b294-a500f57ad288.lovable.app-1778589932764.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0eb68287-f31b-4a11-9d5d-396fdafda79c/id-preview-a8b92886--0707b07e-cd9e-4873-b294-a500f57ad288.lovable.app-1778589932764.png" },
     ],
     links: [
       {
