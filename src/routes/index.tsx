@@ -113,7 +113,7 @@ function Index() {
         <Reveal delay={0.15}>
           <div className="text-xs tracking-[0.3em] text-accent mb-3">WHY P&T</div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Built on trust, driven by vigilance.</h2>
-          <p className="text-muted-foreground mb-6">
+          <p className="text-gradient text-sky-500 mb-6">
             Every client has unique security needs. That's why we provide customized protection services — built around your environment, your risks, and your priorities.
           </p>
           <ul className="space-y-3">
