@@ -31,7 +31,7 @@ function Contact() {
           {[
             { icon: MapPin, label: "Address", value: "Queens Court, 1 Queen St, Worksop S80 2AN, United Kingdom" },
             { icon: Phone, label: "Phone", value: "Available 24/7" },
-            { icon: Mail, label: "Email", value: "info@ptexecutiveprotection.co.uk" },
+            { icon: Mail, label: "Email", value: "info@ptsecurityuk.com" },
             { icon: Clock, label: "Hours", value: "24 hours a day, 7 days a week" },
           ].map((c) => (
             <div key={c.label} className="flex gap-4 p-6 rounded-xl border border-border bg-card hover:border-accent transition-colors">

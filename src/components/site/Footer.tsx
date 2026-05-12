@@ -32,7 +32,7 @@ export function Footer() {
           <ul className="space-y-3 text-sm text-muted-foreground">
             <li className="flex gap-2"><MapPin className="h-4 w-4 text-accent shrink-0 mt-0.5" /> Queens Court, 1 Queen St, Worksop S80 2AN, UK</li>
             <li className="flex gap-2"><Phone className="h-4 w-4 text-accent shrink-0 mt-0.5" /> 24/7 Available</li>
-            <li className="flex gap-2"><Mail className="h-4 w-4 text-accent shrink-0 mt-0.5" /> info@ptexecutiveprotection.co.uk</li>
+            <li className="flex gap-2"><Mail className="h-4 w-4 text-accent shrink-0 mt-0.5" /> info@ptsecurityuk.com</li>
           </ul>
         </div>
       </div>
