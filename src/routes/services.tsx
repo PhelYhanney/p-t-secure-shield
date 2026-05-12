@@ -28,7 +28,7 @@ function Services() {
           <Reveal>
             <div className="text-xs tracking-[0.3em] text-accent mb-3">OUR SERVICES</div>
             <h1 className="text-5xl md:text-6xl font-bold text-slate-50">Security <span className="text-gradient">solutions</span><br/>built around you.</h1>
-            <p className="mt-6 max-w-2xl text-muted-foreground">From close protection to full-site security operations, every service is delivered with the highest standards of confidentiality, vigilance, and customer care.</p>
+            <p className="text-xs tracking-[0.3em] text-accent mb-3 text-slate-50">From close protection to full-site security operations, every service is delivered with the highest standards of confidentiality, vigilance, and customer care.</p>
           </Reveal>
         </div>
       </section>
