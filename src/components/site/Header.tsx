@@ -38,8 +38,8 @@ export function Header() {
           ))}
         </nav>
 
-        <a href="tel:+440000000000" className="hidden md:inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-md bg-gradient-to-r from-primary to-accent text-primary-foreground shadow-glow hover:scale-105 transition-transform">
-          <Phone className="h-4 w-4" /> 24/7 Hotline
+        <a href="tel:+447488893454" className="hidden md:inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-md bg-gradient-to-r from-primary to-accent text-primary-foreground shadow-glow hover:scale-105 transition-transform">
+          <Phone className="h-4 w-4" /> +44 7488 893454
         </a>
 
         <button className="md:hidden text-foreground" onClick={() => setOpen(!open)} aria-label="menu">

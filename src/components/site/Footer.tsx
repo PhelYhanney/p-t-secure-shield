@@ -31,7 +31,7 @@ export function Footer() {
           <h4 className="font-semibold mb-4 text-foreground">Contact</h4>
           <ul className="space-y-3 text-sm text-muted-foreground">
             <li className="flex gap-2"><MapPin className="h-4 w-4 text-accent shrink-0 mt-0.5" /> Queens Court, 1 Queen St, Worksop S80 2AN, UK</li>
-            <li className="flex gap-2"><Phone className="h-4 w-4 text-accent shrink-0 mt-0.5" /> 24/7 Available</li>
+            <li className="flex gap-2"><Phone className="h-4 w-4 text-accent shrink-0 mt-0.5" /> <a href="tel:+447488893454" className="hover:text-accent">+44 7488 893454</a></li>
             <li className="flex gap-2"><Mail className="h-4 w-4 text-accent shrink-0 mt-0.5" /> info@ptsecurityuk.com</li>
           </ul>
         </div>
