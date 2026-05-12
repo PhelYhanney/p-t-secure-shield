@@ -30,7 +30,7 @@ function Contact() {
         <Reveal className="lg:col-span-2 space-y-5">
           {[
             { icon: MapPin, label: "Address", value: "Queens Court, 1 Queen St, Worksop S80 2AN, United Kingdom" },
-            { icon: Phone, label: "Phone", value: "Available 24/7" },
+            { icon: Phone, label: "Phone", value: "+44 7488 893454" },
             { icon: Mail, label: "Email", value: "info@ptsecurityuk.com" },
             { icon: Clock, label: "Hours", value: "24 hours a day, 7 days a week" },
           ].map((c) => (
