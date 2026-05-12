@@ -43,7 +43,7 @@ function Index() {
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/30 text-accent text-xs tracking-[0.25em] mb-6">
               <Shield className="h-3 w-3" /> UK SECURITY EXPERTS
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight text-slate-50">
+            <h1 className="text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight text-[#101060]">
               Protection you can <span className="text-gradient">trust</span>, <br className="hidden md:block" />vigilance you can feel.
             </h1>
             <p className="mt-6 max-w-2xl text-muted-foreground text-slate-50">
