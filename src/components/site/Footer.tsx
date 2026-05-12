@@ -37,7 +37,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-border py-6 text-center text-xs text-muted-foreground flex items-center justify-center gap-2">
-        <Shield className="h-3 w-3 text-accent" /> © {new Date().getFullYear()} P&T Executive Protection. All rights reserved.
+        <Shield className="h-3 w-3 text-accent" /> © 1992-2026 P&T Executive Protection. All rights reserved
       </div>
     </footer>
   );
