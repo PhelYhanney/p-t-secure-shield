@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # Proxy requests to Node.js app
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ http://127.0.0.1:3000/$1 [P,QSA,L]
+</IfModule>
+
+<IfModule mod_proxy.c>
+  ProxyRequests On
+  ProxyPreserveHost On
+  <Location "/">
+    ProxyPass "http://127.0.0.1:3000/"
+    ProxyPassReverse "http://127.0.0.1:3000/"
+  </Location>
+</IfModule>
