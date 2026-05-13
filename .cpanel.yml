@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export NODESELECTOR='' && /opt/cpanel/ea-nodejs20/bin/npm ci --production
+    - export NODESELECTOR='' && /opt/cpanel/ea-nodejs20/bin/npm run build
